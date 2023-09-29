@@ -50,18 +50,17 @@
           </ul>
         </li>
         <!-- DROPDOWN PRODUCTS -->
-        <li class="nav-list dropstart">
-          <a class="dropdown-toggle nav-link" href="" class="nav-link"
-            data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-list">
+          <a class="dropdown-button-two nav-link" href="#" class="nav-link">
             Products
           </a>
-          <ul class="dropdown-menu dropdown-box-two">
+          <ul class="dropdown-content-two dropdown-box-two">
             <li class="dropdown-list">
-              <a class="dropdown-link dropdown-item"
+              <a class="dropdown-link "
                 href="all-xgateway-products.html">xGATEWAYs</a>
             </li>
             <li class="dropdown-list">
-              <a class="dropdown-link dropdown-item"
+              <a class="dropdown-link "
                 href="all-xtag-products.html">xTAG Sensors</a>
             </li>
           </ul>
@@ -391,6 +390,7 @@
   }
   window.addEventListener("scroll", checkContainerInView);
   window.addEventListener("load", checkContainerInView);
+  
     // NAVIGATION BURGER MENU FUNCTIONALITY
     const menuList = document.querySelector(".nav-menu");
     const menuToggle = document.querySelector(".menu-toggle");
@@ -406,14 +406,15 @@
         menuToggle.classList.remove("active");
       }
     });
+
     document.addEventListener('DOMContentLoaded', function () {
-      var button = document.querySelector('.dropdown-button');
-      var dropdown = document.querySelector('.dropdown-content');
+      let button = document.querySelector('.dropdown-button');
+      let dropdown = document.querySelector('.dropdown-content');
 
       button.addEventListener('click', function () {
+
         dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
       });
-
       // Close the dropdown if the user clicks outside of it
       window.addEventListener('click', function (event) {
         if (!event.target.matches('.dropdown-button')) {
@@ -423,7 +424,23 @@
         }
       });
     });
+  document.addEventListener('DOMContentLoaded', function () {
+    let buttonTwo = document.querySelector('.dropdown-button-two');
+    let dropdownTwo = document.querySelector('.dropdown-content-two');
 
+    buttonTwo.addEventListener('click', function () {
+      dropdownTwo.style.display = dropdownTwo.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Close the dropdown if the user clicks outside of it
+    window.addEventListener('click', function (event) {
+      if (!event.target.matches('.dropdown-button-two')) {
+        if (dropdownTwo.style.display === 'block') {
+          dropdownTwo.style.display = 'none';
+        }
+      }
+    });
+  });
     
 
     // NAV TRANSPARENT WHEN SCROLL
