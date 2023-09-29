@@ -1,0 +1,1016 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root{
+  --white: #ffffff;
+  --black: #000000;
+  --text-dark: #333;
+  --hover-color: #f39c12;
+  --primary-blue: #0086BF;
+  --text-gray: #58595b;
+  --primary-font-family:'Roboto', sans-serif;
+  --sub-font-family: 'Roboto Condensed', sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: var(--primary-font-family);
+  scroll-behavior: smooth;
+}
+/* LOGO BRAND */
+/* .navbar-brand{
+  top: 1.5rem;
+  left: 10px;
+  height: 50px;
+  width: 16.5rem;
+} */
+
+/* NAV SECTION */
+.nav-container{
+  background-color: #ffffff;
+  height: 60px;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  top: 0;
+}
+/* .nav-container.transparent{
+  opacity: .8;
+
+} */
+
+.nav-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: -30rem;
+  width: 20rem;
+  height: 100%;
+  background-color: var(--white);
+  box-sizing: -2px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: right .5s ease-in-out;
+  z-index: 1000;
+}
+.nav-item .nav-list{
+  display: grid;
+  place-content: center;
+  
+}
+.nav-menu.active{
+  right: 0;
+}
+.nav-menu .nav-item{
+  list-style: none;
+  padding: 20px;
+}
+.nav-list{
+  margin: 1rem 0;
+  width: 10em; 
+  height: 2.7em;
+  overflow: visible;
+  z-index: 1000;
+}
+.nav-menu .nav-item .nav-list .nav-link{
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color .3s, transform .3s;
+  float: left;
+}
+.nav-menu .nav-item .nav-list .nav-link:hover{
+  color: var(--primary-blue);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* HAMBURGER STYLE MENU */
+.bar {
+  display: block;
+  width: 27px;
+  height: 5px;
+  margin: 3px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--black);
+}
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.5s ease-in-out;
+}
+.menu-toggle {
+  font-size: 2rem;
+}
+.menu-toggle.active {
+  transform: rotate(45deg);
+  
+}
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+  background-color: var(--black);
+}
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(12px) rotate(90deg);
+  background-color: var(--black);
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-16px) rotate(-180deg);
+  background-color: var(--black);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  right: 15rem;
+  width: 18rem;
+  height: 9rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+.dropdown-list{
+  list-style: none;
+}
+.dropdown {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+}
+.dropdown-link {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: #333;
+}
+
+/* HERO SECTION TOP */
+#hero-experience{
+  width: 100%;
+  background-image: url("../images/fiber.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+  margin: 3rem 0 3rem 0;
+}
+#hero-experience::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: .6;
+  background-color: var(--black);
+}
+.hero-title{
+  color: var(--white);
+
+}
+/* IoT SECTION */
+#iot-section{
+  padding: 3rem;
+}
+.iot-content{
+  display: grid;
+  place-content: center;
+}
+.iot-info{
+  width: 40rem;
+}
+.iot-info p{
+  color: var(--text-gray);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.iot-heading h2{
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+.iot-btn{
+  margin-top: .65rem;
+  width: 8rem;
+  height: 2.2rem;
+  font-size: 13px;
+  background-color: var(--primary-blue);
+  color: var(--white);
+  border: 2px solid var(--primary-blue);
+  font-weight: 600;
+  transition: all .3s;
+}
+.iot-btn:hover{
+  background-color: transparent;
+  color: var(--primary-blue);
+  border: 2px solid var(--primary-blue);
+}
+
+/* MOBILE MARKETING SECTION */
+#mobile-section{
+  background-image: url("../images/software.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40rem;
+  z-index: 1;
+  position: relative;
+  margin: 3rem 0 3rem 0;
+}
+#mobile-section::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: .7;
+  background-color: var(--black);
+}
+.mobile-img-container{
+  position: relative;
+  right: 25rem;
+  top: 5rem;
+}
+.mobile-img-container p{
+  font-size: 11px;
+  margin: 1.2rem 0;
+  color: var(--white);
+}
+.heading-title-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  background-color: rgba(0, 134, 191, 0.9);
+  width: 20rem;
+  box-shadow: 2px 3px 3px var(--white);
+}
+.mobile-tech-content{
+  display: grid;
+  place-content: center;
+}
+.mobile-title{
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: var(--white);
+  margin: 0;
+}
+.mobile-info{
+  width: 45rem;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--white);
+}
+.first-info{
+  margin-bottom: 5rem;
+}
+.mobile-btn{
+  width: 8rem;
+  height: 2rem;
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  color: var(--primary-blue);
+  font-weight: 600;
+  font-size: 13px;
+  transition: all .5s;
+}
+.mobile-btn:hover,
+.mobile-btn:focus
+{
+  background-color: var(--primary-blue);
+  border: 2px solid var(--primary-blue);
+  color: var(--white);
+}
+/* xPLAYER and Chameleon SECTION */
+#xplayer-section{
+  padding: 1rem 3rem 5rem 3rem;
+}
+.xplayer-content{
+  display: grid;
+  place-content: center;
+}
+.xplayer-img-container{
+  position: relative;
+  right: 25rem;
+  top: 0;
+}
+.heading-xplayer-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5.5rem;
+  background-color: rgba(0, 134, 191, 0.9);
+  width: 20rem;
+  box-shadow: 2px 3px 3px var(--text-gray);
+}
+.xplayer-title{
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: var(--white);
+  line-height: 1.5;
+  margin: 0;
+}
+.xplayer-info{
+  width: 45rem;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--text-gray);
+}
+/* MEDICAL DEVICE SECTION */
+#med-device-section{
+  width: 100%;
+  background-image: url("../images/software.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 22rem;
+  z-index: 1;
+  position: relative;
+  padding: 3rem;
+}
+#med-device-section::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: .7;
+  background-color: var(--black);
+}
+.med-device-content{
+  display: grid;
+  place-content: center;
+}
+.med-device-heading-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  background-color: rgba(0, 134, 191, 0.9);
+  width: 20rem;
+  box-shadow: 2px 3px 3px var(--white);
+  position: relative;
+  right: 25rem;
+}
+.med-device-title{
+  color: var(--white);
+  font-size: 1rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+.med-device-info{
+  width: 45rem;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--white);
+}
+/* ADVANCE CONTROLS PROGRAMMING FOR INDUSTRIAL SECTION */
+#advance-ctrl-section{
+  padding: 3rem;
+  height: 20rem;
+}
+.advance-ctrl-content{
+  display: grid;
+  place-content: center;
+}
+.advance-ctrl-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  background-color: rgba(0, 134, 191, 0.9);
+  width: 20rem;
+  box-shadow: 2px 3px 3px var(--white);
+  position: relative;
+  right: 25rem;
+  box-shadow: 2px 3px 3px var(--text-gray);
+}
+.advance-ctrl-title{
+  font-size: 1rem;
+  color: var(--white);
+  margin: 0;
+
+} 
+.advance-ctrl-info{
+  width: 45rem;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--text-gray);
+}
+
+/* CONTACT SECTION */
+#contact{
+  margin: 3rem 0 0 0;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+.social-link{
+  text-decoration: none;
+  margin-right: 1.5rem;
+  color: var(--text-dark);
+  font-size: 1.5em;
+  transition: .3s ease;
+}
+a:hover{
+  color: var(--primary-blue);
+}
+
+.social-link i:hover{
+  color: var(--primary-blue);
+  transform: translateY(-5px);
+  transition: all .3s ;
+}
+.social-link-container{
+  margin-top: 1rem;
+  color: var(--text-dark);
+}
+.contact-info{
+  margin-top: 1rem;
+  color: var(--text-gray);
+}
+.contact-info p{
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.footer-item .footer-list{
+  list-style: none;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.footer-item .footer-list .footer-link{
+  text-decoration: none;
+  color: var(--text-gray);
+  font-size: 12px;
+}
+.footer-item .footer-list .footer-link:hover{
+  color: var(--primary-blue);
+  transition: all .3s;
+}
+.contact-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright{
+  margin-top: 1.5rem;
+  letter-spacing: 1px;
+  font-size: 11px;
+  text-align: center;
+  color: var(--text-gray);
+}
+
+/* SCROLL ANIMATION */
+.content-container{
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1.3s ease, transform 1.3s ease;
+}
+
+.content-container.active{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content-container-two{
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: opacity 1.3s ease, transform 1.3s ease;
+}
+
+.content-container-two.active{
+  opacity: 1;
+  transform: translateX(0);
+}
+.content-container-three{
+  opacity: 0;
+  transform: translateX(200px);
+  transition: opacity 1.3s ease, transform 1.3s ease;
+}
+
+.content-container-three.active{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* RESPONSIVE DEVICE SECTION */
+@media screen and (max-width: 1600px) {
+  .mobile-img-container, 
+  .xplayer-img-container, 
+  .med-device-heading-container,
+  .advance-ctrl-heading{
+    right: 23rem;
+  }
+  .mobile-info, 
+  .xplayer-info, 
+  .med-device-info,
+  .advance-ctrl-info{
+    width: 40rem;
+  }
+}
+@media screen and (max-width: 1419px) {
+  .mobile-img-container, 
+  .xplayer-img-container, 
+  .med-device-heading-container,
+  .advance-ctrl-heading{
+    right: 21rem;
+  }
+  .heading-title-container, 
+  .heading-xplayer-title, 
+  .med-device-heading-container,
+  .advance-ctrl-heading{
+    width: 18rem;
+  }
+  
+}
+
+@media screen and (max-width: 1376px) {
+  
+  .mobile-img-container, 
+  .xplayer-img-container, 
+  .med-device-heading-container,
+  .advance-ctrl-heading{
+    right: 16rem;
+  }
+  .mobile-info, 
+  .xplayer-info, 
+  .med-device-info,
+  .advance-ctrl-info{
+    position: relative;
+    left: 5rem;
+    width: 40rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #mobile-section, 
+  #xplayer-section{
+    height: 45rem;
+  }
+  .mobile-img-container, 
+  .xplayer-img-container, 
+  .med-device-heading-container,
+  .advance-ctrl-heading{
+    right: 15rem;
+  }
+   .heading-title-container, 
+   .heading-xplayer-title, 
+   .med-device-heading-container,
+   .advance-ctrl-heading{
+    width: 18rem;
+  }
+  .mobile-info, 
+  .xplayer-info, 
+  .med-device-info,
+  .advance-ctrl-info{
+    position: relative;
+    left: 5rem;
+    width: 35rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .mobile-tech-content, 
+  .xplayer-content, 
+  .med-device-content,
+  .advance-ctrl-content{
+    display: flex;
+    width: 50rem;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .mobile-img-container, 
+  .xplayer-img-container, 
+  .med-device-heading-container,
+  .advance-ctrl-heading{
+    right: 0;
+    top: 0;
+    margin-bottom: 2rem;
+  }
+  .xplayer-img-container{
+    margin-bottom: 5rem;
+  }
+   .heading-title-container, 
+   .heading-xplayer-title, 
+   .med-device-heading-container,
+   .advance-ctrl-heading{
+    width: 18rem;
+  }
+  .mobile-info, 
+  .xplayer-info, 
+  .med-device-info,
+  .advance-ctrl-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    width: 50rem;
+  }
+   html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (max-width: 876px) {
+  .bar {
+    width: 20px;
+  }
+  .menu-toggle {
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    top: 15px;
+  }
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(5px) rotate(90deg);
+    background-color: var(--black);
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-.923rem) rotate(-180deg);
+    background-color: var(--black);
+  }
+  .nav-menu{
+    width: 18rem;
+    height: 100%;
+  }
+  .nav-menu .nav-item .nav-list .nav-link{
+    font-size: 1rem;
+  } 
+  .dropdown-link{
+    font-size: .8rem;
+  }
+  .dropdown-box-one{
+    left: -100%;
+  }
+  .dropdown-box-two{
+    left: -78%;
+  }
+  .navbar-brand img{
+    width: 12rem;
+  }
+  .logo img{
+    width: 12rem;
+  }
+  .contact-info p{
+    font-size: 13px;
+  }
+  .social-link-container{
+    margin-top: 5px;
+  }
+  .social-link{
+    font-size: 1.2rem;
+  }
+  #mobile-section, 
+  #xplayer-section{
+    height: 50rem;
+    padding: 0 2rem;
+  }
+  .mobile-tech-content, 
+  .xplayer-content, 
+  .med-device-content,
+  .advance-ctrl-content{
+    display: flex;
+    width: 36rem;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 auto;
+  }
+  .mobile-img-container, 
+  .xplayer-img-container, 
+  .med-device-heading-container,
+  .advance-ctrl-heading{
+    right: 0;
+    top: 0;
+    margin-bottom: 2rem;
+  }
+   .heading-title-container, 
+   .heading-xplayer-title, 
+   .med-device-heading-container,
+   .advance-ctrl-heading{
+    width: 18rem;
+  }
+  .mobile-info, 
+  .xplayer-info, 
+  .med-device-info,
+  .advance-ctrl-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    width: 34rem;
+  }
+}
+@media screen and (max-width: 767px){
+
+  .logo{
+    display: grid;
+    place-content: center;
+    margin-bottom: 2rem;
+  }
+  .contact-info p,
+  .social-link-container a{
+    display: grid;
+    place-content: center;
+  }
+  .social-link-container a{
+    margin: 0;
+  }
+  .footer-container{
+    width: 10rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .contact-info p{
+    font-size: 11px;
+  }
+  .iot-info {
+    padding: 0 3rem;
+  }
+  .iot-heading h2{
+    font-size: 1.6rem;
+    padding: 0 3rem;
+  }
+  #mobile-section, #xplayer-section{
+    height: 50rem;
+  }
+  .mobile-tech-content, 
+  .xplayer-content, 
+  .med-device-content,
+  .advance-ctrl-content{
+    width: 30rem;
+  }
+
+  .heading-title-container, 
+  .heading-xplayer-title, 
+  .med-device-heading-container,
+  .advance-ctrl-heading{
+    width: 18rem;
+
+  }
+  .mobile-info, 
+  .xplayer-info, 
+  .med-device-info,
+  .advance-ctrl-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    width: 30rem;
+
+  }
+  .mobile-info p, 
+  .xplayer-info p, 
+  .med-device-info p,
+  .advance-ctrl-info p{
+    font-size: 12px;
+  }
+  .mobile-btn{
+    font-size: 12px;
+    height: 25px;
+    width: 6rem;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .footer-container{
+    width: 10rem;
+    margin: 0 auto;
+  }
+  .iot-info {
+    width: 30rem;
+    padding: 0 1rem;
+  }
+  .iot-heading h2{
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+  #mobile-section, 
+  #xplayer-section, 
+  #med-device-section,
+  #advance-ctrl-section{
+    padding: 0;
+  }
+  .mobile-img-container p, 
+  .xplayer-img-container p {
+    font-size: 10px;
+  }
+  .mobile-tech-content, 
+  .xplayer-content, 
+  .med-device-content,
+  .advance-ctrl-content{
+    width: 25rem;
+  }
+  .mobile-title, 
+  .xplayer-title, 
+  .med-device-title,
+  .advance-ctrl-title{
+    font-size: .85rem;
+  }
+   .heading-title-container, 
+   .heading-xplayer-title , 
+   .med-device-heading-container,
+   .advance-ctrl-heading{
+    width: 15rem;
+  }
+  .mobile-info, 
+  .xplayer-info, 
+  .med-device-info,
+  .advance-ctrl-info{
+    width: 25rem;
+  }
+  .mobile-info p, 
+  .xplayer-info p, 
+  .med-device-info p,
+  .advance-ctrl-info{
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .footer-item .footer-list .footer-link{
+    font-size: 10px;
+  }
+  .iot-info {
+    width: 28rem;
+    padding: 0 1.3rem;
+  }
+  .iot-heading h2{
+    font-size: 1.3rem;
+    padding: 0 1.3rem;
+  }
+}
+@media screen and (max-width: 470px) {
+  .copyright{
+    font-size: 9px;
+  }
+  .iot-info {
+    width: 23rem;
+    font-size: 10px;
+    padding: 0;
+  }
+  .iot-heading h2{
+    font-size: 1.2rem;
+    padding: 0;
+  }
+  
+  .mobile-img-container p, 
+  .xplayer-img-container p {
+    font-size: 10px;
+  }
+  .mobile-tech-content, 
+  .xplayer-content, 
+  .med-device-content,
+  .advance-ctrl-content{
+    width: 22rem;
+  }
+  .mobile-title, 
+  .xplayer-title, 
+  .med-device-title,
+  .advance-ctrl-title{
+    font-size: .85rem;
+  }
+  .heading-title-container, 
+  .heading-xplayer-title, 
+  .med-device-heading-container,
+  .advance-ctrl-heading{
+    width: 15rem;
+  }
+  .mobile-info, 
+  .xplayer-info, 
+  .med-device-info,
+  .advance-ctrl-info{
+    width: 22rem;
+  }
+  .mobile-info p, 
+  .xplayer-info p 
+  .med-device-info p,
+  .advance-ctrl-info p{
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 420px) {
+
+  .navbar-brand img{
+    width: 10rem;
+  }
+  .nav-menu .nav-item .nav-list .nav-link{
+    font-size: .8rem;
+  } 
+  .dropdown-link{
+    font-size: .6rem;
+  }
+  .dropdown-box-one{
+    left: -73%;
+  }
+  .dropdown-box-two{
+    left: -73%;
+    height: 4rem;
+  }
+  .iot-info {
+    width: 20rem;
+    padding: 0;
+  }
+  .iot-info p{
+    font-size: 11px;
+  }
+  .iot-heading h2{
+    font-size: 1rem;
+  }
+  .iot-btn{
+    width: 6rem;
+    font-size: 11px;
+    height: 30px;
+  }
+  #mobile-section, #xplayer-section{
+    height: 53rem;
+    padding: 0;
+  }
+  .mobile-img-container p, 
+  .xplayer-img-container p {
+    font-size: 10px;
+  }
+  .mobile-tech-content, 
+  .xplayer-content, 
+  .med-device-content,
+  .advance-ctrl-content{
+    width: 18rem;
+  }
+  .mobile-info, 
+  .xplayer-info, 
+  .med-device-info,
+  .advance-ctrl-info{
+    width: 18rem;
+  }
+  .mobile-info p, 
+  .xplayer-info p, 
+  .med-device-info p, 
+  .advance-ctrl-info p{
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .iot-info p, .iot-heading h2, .iot-btn{
+    padding: 0 1rem;
+  }
+  .iot-btn{
+    margin-left: 1rem;
+  }
+}
